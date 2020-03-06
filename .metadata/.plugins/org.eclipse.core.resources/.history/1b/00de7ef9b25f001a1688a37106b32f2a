@@ -1,0 +1,37 @@
+package br.com.fiap.jpa.teste;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import br.com.fiap.jpa.dao.BebidaDAO;
+import br.com.fiap.jpa.dao.impl.BebidaDAOImpl;
+import br.com.fiap.jpa.entity.Bebida;
+
+public class Teste {
+	
+	//Criar a fabrica
+	
+	EntityManagerFactory fabrica = Persistence.createEntityManagerFactory("oracle");
+	
+	//Instanciar o entity manager
+	
+	EntityManager em = fabrica.createEntityManager();
+	
+	//Instanciar uma BebidaDAOIml...
+	
+	BebidaDAO dao = new BebidaDAOImpl(em);
+	
+	//Istanciar a bebida que será cadastrada
+	
+	Bebida refri = new Bebida("Dolly Cola 350ml", 0
+			new GregorianCalendar(2020, Calendar.AUGUST, 10),
+			3, Tipo.REFRIGERANTE);
+	
+	
+	//Cadastrar uma bebida
+	
+	//Fechar as paradas
+	
+	
+}

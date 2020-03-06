@@ -1,0 +1,15 @@
+package br.com.fiap.jpa.teste;
+
+public class Teste {
+	
+	//Criar a fabrica
+	
+	//Instanciar o entity manager
+	
+	//Instanciar uma BebidaDAOiml...
+	
+	//Cadastrar uma bebida
+	
+	//Fechar as paradas
+	
+}

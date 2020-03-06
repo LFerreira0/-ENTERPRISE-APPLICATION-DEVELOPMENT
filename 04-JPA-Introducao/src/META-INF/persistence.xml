@@ -1,0 +1,29 @@
+<persistence version="1.0"
+	xmlns="http://java.sun.com/xml/ns/persistence">
+	<persistence-unit name="oracle"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<properties>
+			<property name="hibernate.show_sql" value="true" />
+			
+			<!-- 
+				create -> drop/create (apaga e cria as tabelas)
+				update -> criar/alterar as tabelas se for necessário
+				validate -> valida se as classes estão de acordo com as tabelas
+			 -->
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.Oracle12cDialect" />
+			<property name="javax.persistence.jdbc.driver"
+				value="oracle.jdbc.OracleDriver" />
+			<property name="javax.persistence.jdbc.user" value="rm83875" />
+			<property name="javax.persistence.jdbc.password" value="190698" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl" />
+		</properties>
+	</persistence-unit>
+	
+</persistence>
+
+

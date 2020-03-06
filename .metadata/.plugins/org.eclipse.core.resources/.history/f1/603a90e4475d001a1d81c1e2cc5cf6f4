@@ -1,0 +1,103 @@
+package br.com.fiap.entity;
+
+import java.util.Calendar;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+@Entity
+@Table(name="TB_BEBIDA")
+public class Bebida {
+	
+	
+	@Id
+	@Column(name="cd_bloquinho")
+	@GeneratedValue(generator = "bloq", strategy = GenerationType.SEQUENCE)
+	private int codigo;
+	
+	@Column(name="nm_bebida", nullable = false, length =30)
+	private String nome;
+	
+	@Column(name="nr_alcool")
+	private float teorAlcolico;
+	
+	@Column(name="dt_vencimento")
+	private Calendar vencimento;
+	
+	public Bebida() {
+		super();
+	}
+
+	public Bebida(int codigo, String nome, float teorAlcolico, Calendar vencimento, float valor, String tipo) {
+		super();
+		this.codigo = codigo;
+		this.nome = nome;
+		this.teorAlcolico = teorAlcolico;
+		this.vencimento = vencimento;
+		this.valor = valor;
+		this.tipo = tipo;
+	}
+
+	public int getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public float getTeorAlcolico() {
+		return teorAlcolico;
+	}
+
+	public void setTeorAlcolico(float teorAlcolico) {
+		this.teorAlcolico = teorAlcolico;
+	}
+
+	public Calendar getVencimento() {
+		return vencimento;
+	}
+
+	public void setVencimento(Calendar vencimento) {
+		this.vencimento = vencimento;
+	}
+
+	public float getValor() {
+		return valor;
+	}
+
+	public void setValor(float valor) {
+		this.valor = valor;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	@Column(name="vl_bebida")
+	private float valor;
+	
+	@Enumerated(EnumType.STRING)
+	@Column(name="ds_tipo")
+	private String tipo;
+	
+	
+	
+}

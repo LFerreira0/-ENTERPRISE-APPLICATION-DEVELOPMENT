@@ -1,0 +1,20 @@
+package br.com.fiap.jpa.dao;
+
+import br.com.fiap.jpa.entity.Bebida;
+import br.com.fiap.jpa.exception.CommitException;
+
+public interface BebidaDAO {
+	
+	void cadastrar(Bebida bebida);
+	
+	void atualizar(Bebida bebida);
+	
+	Bebida pesquisar(int codigo);
+	
+	void apagar(int codigo);
+	
+	void commit() throws CommitException;
+	
+	void NoDataException () throws NoDataException;
+
+}

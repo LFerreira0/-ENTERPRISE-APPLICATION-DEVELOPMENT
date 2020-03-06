@@ -1,0 +1,44 @@
+package br.com.fiap.jpa.dao.impl;
+
+import javax.persistence.EntityManager;
+
+import br.com.fiap.jpa.dao.BebidaDAO;
+import br.com.fiap.jpa.entity.Bebida;
+
+public class BebidaDAOImpl implements BebidaDAO {
+
+	
+	private EntityManager em;
+	
+	
+	public BebidaDAOImpl(EntityManager em) {
+		this.em = em;
+	}
+	
+	
+	@Override
+	public void cadastrar(Bebida bebida) {
+		em.persist(bebida);
+		
+	}
+
+	@Override
+	public void atualizar(Bebida bebida) {
+		em.getTransaction().begin();
+	}
+
+	@Override
+	public Bebida pesquisar(int codigo) {
+		em.getClass().getName();
+		return null;
+	}
+
+	@Override
+	public void apagar(int codigo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	
+}

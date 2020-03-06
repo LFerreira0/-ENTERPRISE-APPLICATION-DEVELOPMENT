@@ -1,0 +1,16 @@
+package br.com.fiap.entity;
+
+import java.util.Calendar;
+
+public class Bebida {
+
+	private int codigo;
+	private String nome;
+	private float teorAlcolico;
+	private Calendar vencimento;
+	private float valor;
+	private String tipo;
+	
+	
+	
+}

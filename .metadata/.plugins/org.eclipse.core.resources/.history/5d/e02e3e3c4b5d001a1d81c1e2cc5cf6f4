@@ -1,0 +1,32 @@
+package br.com.fiap.jpa.dao.impl;
+
+import br.com.fiap.jpa.dao.BebidaDAO;
+import br.com.fiap.jpa.entity.Bebida;
+
+public class BebidaDAOImpl implements BebidaDAO{
+
+	@Override
+	public void cadastrar(Bebida bebida) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void atualizar(Bebida bebida) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Bebida pesquisar(int codigo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void apagar(int codigo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

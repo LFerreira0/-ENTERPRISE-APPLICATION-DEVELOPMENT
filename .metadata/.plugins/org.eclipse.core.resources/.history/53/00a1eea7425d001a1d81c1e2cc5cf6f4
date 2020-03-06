@@ -1,0 +1,26 @@
+package br.com.fiap.jpa.teste;
+
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public class RemoveTeste {
+
+	public static void main(String[] args) {
+		// Criar a fabrica
+		
+		EntityManagerFactory fabrica = 
+				Persistence.createEntityManagerFactory("oracle");
+		
+		//Criar o Entity Manager
+		
+		//Pesquisar uma viagem
+		
+		//Remover a viagem
+		
+		//Commit
+		
+		//Fechar as paradas
+
+	}
+
+}
